@@ -20,9 +20,9 @@ const list = [
         price: 7
     },
     {
-        item: "Fruit",
+        item: "Apples",
         qty: 5,
-        price: 2.50
+        price: 3.50
     },
     {
         itme: "Sandwich buns",
@@ -35,3 +35,4 @@ const list = [
         price: 4
     }
 ]
+console.log(list)
