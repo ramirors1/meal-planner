@@ -35,4 +35,51 @@ const list = [
         price: 4
     }
 ]
-console.log(list)
+ 
+const calcId = (arr) => {
+    const lastIndex = arr.length -1
+    if (lastIndex === -1) {
+        const newId = 1
+        return newId
+    }
+    const lastItemId = arr[lastIndex].newId
+    const newId = lastItemId + 1
+    return newId
+}
+
+const addToShoppingList = [
+    {
+        item: "Oreos",
+        qty: 1,
+        price: 5
+    },
+    {
+        item: "Milk",
+        qty: 1,
+        price: 4
+    },
+    {
+        item: "Flour",
+        qty: 1,
+        price: 4 
+    },
+    {
+        item: "Charcoal",
+        qty: 2,
+        price: 16
+    },
+    {
+        item: "Lighter Fluid",
+        qty: 1,
+        price: 4
+    }
+] 
+list.push(addToShoppingList)
+
+var currentdate = new Date();
+var datetime = "Last Sync: " + currentdate.getDay() + "/" + currentdate.getMonth() 
++ "/" + currentdate.getFullYear() + " @ " 
++ currentdate.getHours() + ":" 
++ currentdate.getMinutes();
+
+ console.log(list, new Date)
