@@ -1,80 +1,94 @@
 const list = [
     {
+        id: 1,
         item: "Bananas",
         qty: 5,  
         price: 1.50 
     },
     {
+        id: 2,
         item: "Eggs",
         qty: "dozen",
         price: 2.50
     },
     {
+        id: 3,
         item: "Pizza rolls",
         qty: "box",
         price: 4.50
     },
     {
+        id: 4,
         item: "Protien",
         qty: 1,
         price: 7
     },
     {
+        id: 5,
         item: "Apples",
         qty: 5,
         price: 3.50
     },
     {
+        id: 6,
         itme: "Sandwich buns",
         qty: 1,
         price: 3
     },
     {
+        id: 7,
         item: "Condiments",
         qty: 2,
         price: 4
     }
 ]
- 
 const calcId = (arr) => {
-    const lastIndex = arr.length -1
+    const lastIndex = arr.length - 1
     if (lastIndex === -1) {
         const newId = 1
         return newId
     }
-    const lastItemId = arr[lastIndex].newId
+    const lastItemId = arr[lastIndex].id
     const newId = lastItemId + 1
     return newId
 }
-
+ const newId = calcId(list)
+ 
 const addToShoppingList = [
     {
+        id: (newId),
         item: "Oreos",
         qty: 1,
         price: 5
     },
-    {
+    {        
+        id: (newId),
         item: "Milk",
         qty: 1,
         price: 4
     },
     {
+        id: (newId),
         item: "Flour",
         qty: 1,
         price: 4 
     },
     {
+        id: (newId),
         item: "Charcoal",
         qty: 2,
         price: 16
     },
     {
+        id: (newId),
         item: "Lighter Fluid",
         qty: 1,
         price: 4
     }
 ] 
 list.push(addToShoppingList)
+
+
 
 var currentdate = new Date();
 var datetime = "Last Sync: " + currentdate.getDay() + "/" + currentdate.getMonth() 
