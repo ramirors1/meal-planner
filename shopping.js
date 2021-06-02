@@ -1,9 +1,9 @@
-const list = [
+const lists = [
     {
         id: 1,
         item: "Bananas",
-        qty: 5,  
-        price: 1.50 
+        qty: 5,
+        price: 1.50
     },
     {
         id: 2,
@@ -52,48 +52,68 @@ const calcId = (arr) => {
     const newId = lastItemId + 1
     return newId
 }
- const newId = calcId(list)
- 
-const addToShoppingList = [
-    {
-        id: (newId),
-        item: "Oreos",
-        qty: 1,
-        price: 5
-    },
-    {        
-        id: (newId),
-        item: "Milk",
-        qty: 1,
-        price: 4
-    },
-    {
-        id: (newId),
-        item: "Flour",
-        qty: 1,
-        price: 4 
-    },
-    {
-        id: (newId),
-        item: "Charcoal",
-        qty: 2,
-        price: 16
-    },
-    {
-        id: (newId),
-        item: "Lighter Fluid",
-        qty: 1,
-        price: 4
-    }
-] 
-list.push(addToShoppingList)
+const newId = calcId(lists)
+
+
+const oreos = {
+    item: "Oreos",
+    qty: 1,
+    price: 5
+}
+oreos.id = newId
+lists.push(oreos)
+
+const milk = {
+    item: "Milk",
+    qty: 1,
+    price: 4
+}
+const milkid = calcId(lists)
+milk.id = milkid
+lists.push(milk)
+
+const flour = {
+    item: "Flour",
+    qty: 1,
+    price: 4
+}
+const flourid = calcId(lists)
+flour.id = flourid
+lists.push(flour)
+
+const charcoal = {
+    item: "Charcoal",
+    qty: 2,
+    price: 16
+}
+const charcoalid = calcId(lists)
+charcoal.id = charcoalid
+lists.push(charcoal)
+
+const lighter = {
+    item: "Lighter Fluid",
+    qty: 1,
+    price: 4
+}
+const lighterid = calcId(lists)
+lighter.id = lighterid
+lists.push(lighter)
+
+lists.push(oreos, milk, flour, charcoal, lighter)
 
 
 
 var currentdate = new Date();
-var datetime = "Last Sync: " + currentdate.getDay() + "/" + currentdate.getMonth() 
-+ "/" + currentdate.getFullYear() + " @ " 
-+ currentdate.getHours() + ":" 
-+ currentdate.getMinutes();
+var datetime = "Last Sync: " + currentdate.getDay() + "/" + currentdate.getMonth()
+    + "/" + currentdate.getFullYear() + " @ "
+    + currentdate.getHours() + ":"
+    + currentdate.getMinutes();
 
- console.log(list, new Date)
+console.log(lists, new Date)
+
+for (const list of lists) {
+    if (list.price > 8) {
+ console.log(` ${list.item} is too much.`)
+    }
+}
+    
